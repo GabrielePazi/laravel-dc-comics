@@ -1,0 +1,34 @@
+@use "./_variables" as *;
+
+header {
+  .primary-header {
+    background-color: $primary-blue;
+    font-size: .8rem;
+  }
+
+  .secondary-header {
+    .search-bar {
+      border: 0px !important;
+      border-bottom: solid 3px $primary-blue !important;
+    }
+
+    ::placeholder {
+      text-align: end;
+    }
+
+    form {
+      max-width: 150px;
+    }
+
+    a {
+      border-bottom: solid 3px transparent !important;
+
+      &:hover {
+        color: $primary-blue;
+        border-bottom: solid 3px $primary-blue !important;
+      }
+    }
+
+
+  }
+}

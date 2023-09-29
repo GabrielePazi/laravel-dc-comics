@@ -1,0 +1,25 @@
+@use "./_variables" as *;
+@use "./utilities" as *;
+
+.homepage-container {
+  background-color: rgb(28, 28, 28);
+
+  .btn-top {
+    transform: translateY(-50%);
+  }
+
+  .card-container {
+    img {
+      aspect-ratio: 1/1;
+    }
+
+    button {
+      width: 200px;
+    }
+  }
+}
+
+.shop-icon {
+  width: 30px;
+  margin: 3rem 0rem;
+}

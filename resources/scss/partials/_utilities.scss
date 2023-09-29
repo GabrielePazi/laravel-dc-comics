@@ -1,0 +1,10 @@
+@use "./_variables" as *;
+
+.button-primary {
+  background-color: $primary-blue;
+  color: white;
+  border: 0px;
+  border-radius: 0%;
+  font-weight: 500;
+  padding: .5rem 1rem;
+}

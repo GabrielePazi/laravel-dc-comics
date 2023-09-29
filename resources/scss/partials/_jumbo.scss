@@ -1,0 +1,11 @@
+@use "./_variables" as *;
+
+.jumbo-container {
+  background-image: url('/public/imgs/jumbotron.jpg');
+  height: 400px;
+
+  button {
+    margin-bottom: 0px;
+    transform: translateY(50%);
+  }
+}

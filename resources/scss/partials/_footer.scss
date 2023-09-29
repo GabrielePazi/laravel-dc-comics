@@ -1,0 +1,20 @@
+@use "./_variables" as *;
+
+footer {
+  background-image: url('/public/imgs/footer-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .row {
+    background-image: url('/public/imgs/dc-logo-bg.png');
+    background-repeat: no-repeat;
+    background-position: 700px;
+    background-size: 600px;
+    margin-left: 8%;
+  }
+
+  .social-container {
+    background-color: $color-footer-bg;
+    padding: 0% 8%;
+  }
+}

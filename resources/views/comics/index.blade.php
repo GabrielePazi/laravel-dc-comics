@@ -1,11 +1,5 @@
 @php
-    $shopBarLinks = [
-        ['name' => 'DIGITAL COMICS', 'image' => 'imgs/buy-comics-digital-comics.png'], 
-        ['name' => 'DC MERCHANDISE', 'image' => 'imgs/buy-comics-merchandise.png'], 
-        ['name' => 'SUBSCRIPTION', 'image' => 'imgs/buy-comics-subscriptions.png'], 
-        ['name' => 'COMIC SHOP LOCATOR', 'image' => 'imgs/buy-comics-shop-locator.png'], 
-        ['name' => 'DC POWER VISA', 'image' => 'imgs/buy-dc-power-visa.svg']
-    ];
+    $shopBarLinks = [['name' => 'DIGITAL COMICS', 'image' => 'imgs/buy-comics-digital-comics.png'], ['name' => 'DC MERCHANDISE', 'image' => 'imgs/buy-comics-merchandise.png'], ['name' => 'SUBSCRIPTION', 'image' => 'imgs/buy-comics-subscriptions.png'], ['name' => 'COMIC SHOP LOCATOR', 'image' => 'imgs/buy-comics-shop-locator.png'], ['name' => 'DC POWER VISA', 'image' => 'imgs/buy-dc-power-visa.svg']];
 @endphp
 
 @extends('layouts.public')
@@ -36,10 +30,10 @@
                 <div class="col-8">
                     <div class="shop d-flex justify-content-evenly gap-5">
                         @foreach ($shopBarLinks as $shopBarLink)
-                        <div class="d-flex align-items-center gap-3">
-                            <img class="shop-icon" src="{{ $shopBarLink["image"] }}" alt="">
-                            <div class="text-white">{{ $shopBarLink["name"] }}</div>
-                        </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <img class="shop-icon" src="{{ $shopBarLink['image'] }}" alt="">
+                                <div class="text-white">{{ $shopBarLink['name'] }}</div>
+                            </div>
                         @endforeach
                     </div>
                 </div>

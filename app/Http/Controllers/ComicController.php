@@ -12,4 +12,9 @@ class ComicController extends Controller
 
         return view("comics.index", ["comics" => $data]);
     }
+
+    public function show($id) {
+        $comic = Comic::find($id);
+        return view('comics.show', compact('comic'));
+    }
 }

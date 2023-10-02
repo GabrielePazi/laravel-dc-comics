@@ -16,7 +16,11 @@
                         @foreach ($comics as $comic)
                             @include('partials.card')
                         @endforeach
+                    </div>
+                    <div class="d-flex gap-3 justify-content-center my-3">
                         <button class="button-primary fw-semibold">LOAD MORE</button>
+                        <a href="{{ route('comics.create') }}"><button class="button-primary fw-semibold">ADD
+                                COMIC</button></a>
                     </div>
 
                 </div>

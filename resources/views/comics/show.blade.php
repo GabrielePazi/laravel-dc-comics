@@ -112,6 +112,11 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="w-100 text-center mt-5 mb-3">
+                        <a href="comics.index"><button class="btn btn-primary">HOME</button></a>
+                    </div>
+
                 </div>
             </div>
         </div>

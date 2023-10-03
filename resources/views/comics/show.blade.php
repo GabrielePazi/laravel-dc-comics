@@ -113,8 +113,16 @@
                         </div>
                     </div>
 
-                    <div class="w-100 text-center mt-5 mb-3">
-                        <a href="comics.index"><button class="btn btn-primary">HOME</button></a>
+                    <div class=" d-flex gap-3 w-100 justify-content-center mt-5 mb-3">
+                        <a href="{{ route('comics.index') }}"><button class="btn btn-primary">HOME</button></a>
+                        <a href="{{ route('comics.edit', $comic->id) }}"><button class="btn btn-success">Modify
+                                Comic</button></a>
+                        <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                            @csrf
+                            @method('delete')
+
+                            <button class="btn btn-danger">Delete Comic</button>
+                        </form>
                     </div>
 
                 </div>

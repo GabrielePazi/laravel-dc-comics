@@ -45,4 +45,29 @@ class ComicController extends Controller
 
         return redirect()->route('comics.show', $newComic->id);
     }
+
+    public function edit($id)
+    {
+        $comicToModify = Comic::findOrFail($id);
+        return view('comics.edit', ["comic" => $comicToModify]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $comic = Comic::findOrFail($id);
+
+        $data = $request->all();
+
+        $data["artists"] = explode(",", $data["artists"]);
+        $data["writers"] = explode(",", $data["writers"]);
+
+        $comic->update($data);
+        return redirect()->route('comics.show', $comic->id);
+    }
+
+    public function destroy(Comic $comic)
+    {
+        $comic->delete();
+        return redirect()->route('comics.index');
+    }
 }

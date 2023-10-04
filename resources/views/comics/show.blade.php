@@ -73,7 +73,7 @@
                                     </div>
                                 </li>
                                 <li class="list-group-item bg-light d-flex border-bottom">
-                                    <div style="width: 33%">Art by:</div>
+                                    <div style="width: 33%">Style by:</div>
                                     <div style="width: 67%">
                                         @for ($i = 0; $i < count(json_decode($comic->writers)); $i++)
                                             @if ($i != count(json_decode($comic->writers)) - 1)

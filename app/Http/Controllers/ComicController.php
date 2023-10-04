@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use App\Http\Requests\StorePostRequest;
 
 class ComicController extends Controller
 {
@@ -25,9 +26,10 @@ class ComicController extends Controller
         return view('comics.create');
     }
 
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
+
 
         $newComic = new Comic();
 
@@ -52,11 +54,11 @@ class ComicController extends Controller
         return view('comics.edit', ["comic" => $comicToModify]);
     }
 
-    public function update(Request $request, $id)
+    public function update(StorePostRequest $request, $id)
     {
         $comic = Comic::findOrFail($id);
 
-        $data = $request->all();
+        $data = $request->validated();
 
         $data["artists"] = explode(",", $data["artists"]);
         $data["writers"] = explode(",", $data["writers"]);
